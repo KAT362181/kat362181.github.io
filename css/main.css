@@ -48,6 +48,11 @@ main {
   opacity: 0;
 }
 
+.doorwindow {
+  width: 140px;
+  text-align: center;
+}
+
 
 .overlay-door {
   position: fixed;
@@ -81,7 +86,6 @@ main {
   opacity: 0;
   transform: translateX(-500px);
   transition: transform 1s, opacity 1s;
-  pointer-events: none;
 }
 
 .overlay-door2.show {
@@ -89,45 +93,19 @@ main {
   transform: translateX(0);
 }
 
-/* .overlay-door .hide {
-  opacity: 0;
-} */
-
-
 /* mirror */
 
 .mirror {
-  display:flex;
+  display: flex;
   position: relative;
   justify-content: center;
 } 
-
-/* .mirror .fadeUp{
-  justify-content: center;
-  opacity: 1;
- } */
   
 .mirror img{
   text-align: center;
   position: absolute;
   opacity: 0;
 }
-
-/* .mirror img .mi1 {
-  text-align: center;
-  position: absolute;
-  opacity: 0;
-
-  transition: opacity 1s;
-} */
-
-/* .mirror img .mi1 .fadeUp{
-  text-align: center;
-  position: absolute;
-  opacity: 1;
-
-  transition: opacity 1s;
-} */
 
 .mirror img .hide{
   text-align: center;
@@ -136,31 +114,32 @@ main {
   transition: opacity 1s;
 }
 
-
-
-
 .mirror img .mi8,.mi9,.mi10 {
   opacity: 0;
-
 }
 
 /* mirror フェードイン */
 .m-fade-in {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(50px);
-  transition: opacity 2s, transform 2s;
+  transform: translateY(10px);
+  transition: opacity .1s, transform 2s;
 }
 .m-fade-in.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
+.m-fade-in.hide {
+  opacity: 0;
+  visibility: visible;
+}
+
 /* mirror フェードイン opacity*/
 .m-fade-in-opacity {
   opacity: 0;
   visibility: hidden;
-  transition: opacity .2s;
+  transition: opacity 1s;
 }
 .m-fade-in-opacity.show {
   opacity: 1;
@@ -178,7 +157,7 @@ main {
   opacity: 0;
   visibility: hidden;
   transform: translatex(10px);
-  transition: opacity .2s, transform .2s;
+  transition: opacity 1s, transform 1s;
 }
 .m-fade-in-left.show {
   opacity: 1;
@@ -191,7 +170,7 @@ main {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity .2s, transform .2s;
+  transition: opacity 1s, transform 1s;
 }
 .m-fade-in-top.show {
   opacity: 1;
@@ -204,7 +183,7 @@ main {
   opacity: 0;
   visibility: hidden;
   transform: translateX(-10px);
-  transition: opacity .2s, transform .2s;
+  transition: opacity 1s, transform 1s;
 }
 .m-fade-in-right.show {
   opacity: 1;
@@ -217,12 +196,19 @@ main {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity .2s, transform .2s;
+  transition: opacity 1s, transform 1s;
 }
 .m-fade-in-bottom.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
+}
+
+.white{
+  width: 241px;
+  background: white;
+  height: 325px;
+  margin: 16px 0 0 0;
 }
 
 
@@ -234,7 +220,7 @@ main {
 
 .sp-menu #open {
   top: 16px;
-  right: 16px;
+  right: 32px;
   font-size: 32px;
   line-height: 64px;
   cursor: pointer;
@@ -253,14 +239,18 @@ main {
   background: rgba(255, 255, 255, 0.95);
   text-align: center;
   padding: 64px;
-  opacity: 0;
   pointer-events: none;
-  transition: .6s;
-  }
-  
-  .menu-overlay.show {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 0;
+  transform: translateY(-500px);
+  transition: opacity .6s, transform .6s;
+  z-index: 1;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+
   }
   
   .menu-overlay #close {
@@ -275,6 +265,9 @@ main {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+  .menu-overlay li img{
+    width: 75px;
   }
   
   
@@ -300,6 +293,10 @@ main {
   
   .menu-overlay.show li:nth-child(3){
     transition-delay: .3s;
+  }
+
+  .menu-overlay.show li:nth-child(4){
+    transition-delay: .4s;
   }
   
   .pc-menu {
@@ -337,4 +334,3 @@ main {
   
   }
 
-  
