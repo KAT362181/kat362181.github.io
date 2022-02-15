@@ -74,4 +74,4 @@ close.addEventListener('click', () => {
 });
 
 
-};
+}
