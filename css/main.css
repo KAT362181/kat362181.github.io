@@ -6,13 +6,10 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  font-family: Verdana, sans-serif;
   /* align-items: center; */
 }
 
-body{
-  margin: 0;
-  font-family: Verdana, sans-serif;
-}
 
 header {
   display: flex;
@@ -36,6 +33,12 @@ main {
 
 /* door */
 /* door */
+
+.door {
+  display: flex;
+  text-align: center;
+}
+
 #door {
   height: 80%;
   margin: 50vh auto 0;
